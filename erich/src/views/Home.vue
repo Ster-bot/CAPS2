@@ -1,4 +1,4 @@
-<template>
+<template> 
   <div style="background-color: #ffffff">
     <home-header v-if="headerCond"></home-header>
     <home-header-acc v-else></home-header-acc>
@@ -10,6 +10,7 @@
 </template>
 
 <script>
+  //adasdhatdog
   import HomeHeader from "../components/Home/HomeHeaderVisitor.vue";
   import HomeCarousel from "../components/Home/HomeCarousel.vue";
   import HomeCategories from "../components/Home/HomeCategories.vue";
