@@ -6,6 +6,7 @@
       <v-row>
         <v-col
           cols="8"
+          class="mt-8"
         >
           <v-row>
             <v-col cols="5">
@@ -60,7 +61,7 @@
             <v-col>
               <div class="mt-n5 ">
                 <v-text-field
-                  label="Outlined"
+                  label=""
                   placeholder="Placeholder"
                   outlined
                   v-model="barcodeBuy"
@@ -94,7 +95,7 @@
                         <th>
                           Total
                         </th>
-                        <th>
+                        <th class="">
                           Actions
                         </th>
                       </tr>
@@ -110,12 +111,19 @@
                         <td>{{priceRound(order.itemQty * order.itemPrice)}}</td>
                         <td>
                           <v-btn
+                            dark
+                            color="#FFA600"
+                            class="pt-3"
                             @click="openDialog(n)"
                           >
                             <p>Update</p>
                           </v-btn>
                           <v-btn
+                            dark
+                            color="#1106A0"
+                            class="pt-3 ml-2"
                             @click="deleteItem(n)"
+                            
                           >
                             <p>Delete</p>
                           </v-btn>
@@ -131,52 +139,65 @@
 
         <v-col
           cols="4"
+          class="mt-5"
         >
           <v-row>
             <v-col>
               <div class="mx-10">
-                <h1 class="display-2 font-weight-black fontTitle">TOTAL</h1>
+                <h1 class="font-weight-black fontBlue">TOTAL</h1 >
                   <v-row>
                     <v-col class="d-flex justify-center tBorder mt-1">
                       <h4
-                      class="display-3 py-8 fontDesc"
+                      class="display-3 font-weight-bold py-8 fontTitle"
                       >{{priceRound(totalPrice)}}</h4>
                     </v-col>
                   </v-row>
-                
-                
               </div>
+            </v-col>
+          </v-row>
+
+          <v-row>
+            <v-col>
+              <div class="mx-7">
+                <h2 class="font-weight-black fontBlue ml-5">Product Info</h2>
+                <div class="tBorder mt-n1 py-16 fontTitle">
+
+                  <div class="d-flex justify-center">
+                    <h1
+                        class="pr-1"
+                      >
+                        {{itemName}}
+                        </h1>
+                      <h1
+                        class="pr-1"
+                      >
+                        {{itemDesc}}
+                      </h1>
+                  </div>
+                    
+                  
+                  <div class="d-flex justify-center">
+                    <h1
+                        class="pr-1"
+                      >
+                        {{itemSize}}
+                      </h1>
+                  </div>       
+                </div>
+              </div>
+
             </v-col>
           </v-row>
           <v-row>
             <v-col>
-              <div>
-                <p>Product Info</p>
-                <p
-                  class="title"
-                >
-                  {{itemName}}
-                </p>
-                <p
-                  class="title"
-                >
-                  {{itemDesc}}
-                </p>
-                <p
-                  class="title"
-                >
-                  {{itemSize}}
-                </p>
-              </div>
-            </v-col>
-          </v-row>
-          <v-row>
-            <v-col>
-              <div>
+              <div class="ml-7">
                 <v-btn
+                  dark
+                  color="#1106A0"
+                  class="px-16 py-8"
                   @click="dialog = true"
                 >
-                  <p>Confirm</p>
+                  <h4>Confirm</h4>
                 </v-btn>
               </div>
             </v-col>
@@ -190,8 +211,8 @@
       max-width="600px"
     >
       <v-card>
-        <v-card-title>
-          <span class="text-h5">Order Confirm</span>
+        <v-card-title class="d-flex justify-center">
+          <h4 class=" my-2">Order Confirm</h4>
         </v-card-title>
         <v-card-text>
           <v-container>
@@ -203,6 +224,7 @@
                   :key="i"
                 >
                   <v-list-item-content
+                  class="mt-n4"
                   >
                     <div class="mt-10">
                       <h3>{{order.itemName}}</h3>
@@ -210,29 +232,29 @@
                       <div
                         class="d-flex"
                       >
-                        <h3>{{order.itemDesc}}</h3>
+                        <h4 class="fontDesc">{{order.itemDesc}}</h4>
                         <v-spacer></v-spacer>
-                        <h3>{{priceRound(order.itemPrice * order.itemQty)}}</h3>
+                        <h3 class="mt-n4">{{priceRound(order.itemPrice * order.itemQty)}}</h3>
                       </div>
                     </div>
                   </v-list-item-content>
                 </v-list-item>
               </v-list-item-group>
             </v-list>
-            <p>{{priceRound(totalPrice)}}</p>
+            <h3 class="fontBlue d-flex justify-end pr-4 mt-10">{{priceRound(totalPrice)}}</h3>
           </v-container>
         </v-card-text>
-        <v-card-actions>
+        <v-card-actions class="mr-2">
           <v-spacer></v-spacer>
           <v-btn
-            color="blue darken-1"
+            color="#1106A0"
             text
             @click="dialog = false"
           >
             Close
           </v-btn>
           <v-btn
-            color="blue darken-1"
+            color="#1106A0"
             text
             @click="finishOrder"
           >
@@ -457,7 +479,8 @@
     border-radius: 5px; 
   }
 .tBorder{
-  border: 5px solid #464646;
+  border: 5px solid #FFA600;
   border-radius: 10px;
 }
+
 </style>
