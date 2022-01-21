@@ -21,9 +21,9 @@
             >
               <v-img
                 contain
-                src="../../assets/ERICH.svg"
-                max-height="120px"
-                max-width="120px"
+                src="../../assets/ERICHNEW.svg"
+                max-height="122px"
+                max-width="122px"
                 class="pb-1"
               >
               </v-img>
@@ -39,13 +39,14 @@
             cols="6"
           >
             <v-text-field
+              rounded
               class="py-2"
               color="#1106A0"
               hide-details="auto"
               outlined
               prepend-inner-icon="mdi-magnify"
               dense
-              background-color="white"
+              background-color="#EDEDF0"
               placeholder="Search for entire store here.."
               v-model="searchKey"
               v-on:keyup="toSearch(searchKey)"
@@ -62,12 +63,15 @@
                 text
                 :to="{name: 'Cart' , params: { id: 'items', title: 'Items'}}"
               >
-                <v-icon
-                  large
-                  color="#1106A0"
-                >
-                  mdi-cart
-                </v-icon>
+                <v-img
+                contain
+                src="../../assets/headerCart.png"
+                max-height="80%"
+                max-width="80%"
+               
+              >
+                
+              </v-img>
               </v-btn>
             </v-badge>
           </v-col>
@@ -145,7 +149,7 @@
                       text
                       v-bind="attrs"
                       v-on="on"
-                      class="qfont elevation-4 px-2"
+                      class="qfont elevation-3 px-2"
                       color="#1106A0"           
                     >
                       <h4 class="font-weight-black">My Account</h4>

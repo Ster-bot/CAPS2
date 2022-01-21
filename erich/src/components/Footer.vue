@@ -152,7 +152,7 @@
           md="8"
         >
           <div class="mx-5">
-          <v-icon color="#1106A0"> mdi-alpha-c-circle-outline</v-icon>
+          <v-icon color="#FFA600"> mdi-alpha-c-circle-outline</v-icon>
           <span class="qfont fontTitle ml-1"> Erich Grocery. All Rights Reserve</span>
         </div>
         </v-col>

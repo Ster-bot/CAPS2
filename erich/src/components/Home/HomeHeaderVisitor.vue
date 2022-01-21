@@ -21,7 +21,7 @@
             >
               <v-img
                 contain
-                src="../../assets/ERICH.svg"
+                src="../../assets/ERICHNEW.svg"
                 max-height="120px"
                 max-width="120px"
                 class="pb-1"
@@ -41,13 +41,14 @@
           >
   
             <v-text-field
-              class="py-2"
+              rounded
+              outlined
+              class="py-2 "
               color="#1106A0"
               hide-details="auto"
-              outlined
               prepend-inner-icon="mdi-magnify"
               dense
-              background-color="white"
+              background-color="#EDEDF0"
               placeholder="Search for entire store here.."
               v-model="searchKey"
               v-on:keyup="toSearch(searchKey)"
@@ -74,12 +75,15 @@
               text
               to="/login"
             >
-              <v-icon
-                large
-                color="#1106A0"
+              <v-img
+                contain
+                src="../../assets/headerCart.png"
+                max-height="50%"
+                max-width="50%"
+                
               >
-                mdi-cart
-              </v-icon>
+                
+              </v-img>
               <span
                 class="white--text"
               >

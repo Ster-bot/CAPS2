@@ -14,10 +14,10 @@
             >
               <v-img
                 contain
-                src="../../assets/ERICH.svg"
-                max-height="120px"
-                max-width="120px"
-                class="mr-1"
+                src="../../assets/ERICHNEW.svg"
+                max-height="100px"
+                max-width="100px"
+                class="mr-2"
               ></v-img>
               <v-divider
                 vertical

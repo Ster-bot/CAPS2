@@ -11,7 +11,7 @@
           md="12"
           cols="12"
         >
-          <h2>Browse by Category</h2>
+          <h3 class="mt-5">Browse by Category</h3>
         </v-col>
       </v-row>
       <v-row>
@@ -67,30 +67,34 @@
                   <v-card
                     
                     :elevation="hover? 4:0"
-                    height="100px"
-                    width="300px"
-                    class="rounded-lg mx-5 elevation-0"
+                    height="150px"
+                    width="150px"
+                    class="rounded-lg mx-2 elevation-0"
                     
-                    :style="{'background-color':hover ?'#E2E0FF':'#EDEDF0'}"
+                    :style="{'background-color':hover ?'#E2E0FF':'#F8F8FC'}"
                     @click="toCategoriseItem(categorie.ccond)"
                   >
                     <div class="d-flex justify-center">
-                      <div class="mt-5" >
+                      <div class="mt-2" >
                         <v-img contain
-                          height="100%"
+                          class="mt-5"
+                          height="50%"
                           width="100%"
                           :src="require('../../assets/CategoryPics/'+categorie.cimg)"
                           >
                         </v-img>
                       </div> 
+                    </div>
+                    <div>
+                      <v-card-title
+                        class="d-flex justify-center ma-0 pa-0"
+                      >
+                        <h5 class="grey--text text--darken-2 mt-n3">
+                          {{categorie.cname}}
+                        </h5>
+                      </v-card-title>
                     </div>          
-                    <v-card-title
-                      class="d-flex justify-center ma-0 pa-0"
-                    >
-                      <h5 class="grey--text text--darken-2">
-                        {{categorie.cname}}
-                      </h5>
-                    </v-card-title>
+                    
                   </v-card>
                   </template>
                 </v-hover>
@@ -109,16 +113,20 @@
   export default {
     data: () => ({
       categories: [
-        { id: 1, cname: "Snacks", cimg: "Snacks.png", ccond: "snacks"},
-        { id: 2, cname: "Bakery", cimg: "Breads.png", ccond: "bakery"},
-        { id: 3, cname: "Sweets", cimg: "Snacks.png", ccond: "sweets"},
-        { id: 4, cname: "Pasta", cimg: "Pantry.png", ccond: "pasta"},
-        { id: 5, cname: "Personal Care", cimg: "Pantry.png", ccond: "personalCare"},
-        { id: 6, cname: "Baking", cimg: "Beverages.png", ccond: "baking"},
-        { id: 7, cname: "Powdered", cimg: "Pantry.png", ccond: "powdered"},
-        { id: 8, cname: "Frozen Goods", cimg: "Frozen.png", ccond: "frozenGoods"},
-        { id: 9, cname: "Canned Goods", cimg: "Snacks.png", ccond: "cannedGoods"},
-        { id: 10, cname: "Promo Deals", cimg: "Pantry.png", ccond: "sweets"},
+        
+        { id: 1, cname: "Bakery", cimg: "bakery.png", ccond: "bakery"},
+        { id: 2, cname: "Baking Goods", cimg: "baking.png", ccond: "baking"},
+        { id: 3, cname: "Beverages", cimg: "beverages,png", ccond: "beverages"},
+        { id: 4, cname: "Canned Goods", cimg: "cannedGoods.png", ccond: "cannedGoods"},
+        { id: 5, cname: "Condiments", cimg: "condiments.png", ccond: "condiments"},
+        { id: 6, cname: "Dairy", cimg: "dairy.png", ccond: "dairy"},
+        { id: 7, cname: "Frozen Goods", cimg: "frozen.png", ccond: "frozenGoods"},
+        { id: 8, cname: "Laundry", cimg: "laundry.png", ccond: "laundry"}, 
+        { id: 9, cname: "Pasta", cimg: "pasta.png", ccond: "pasta"},
+        { id: 10, cname: "Personal Care", cimg: "personalCare.png", ccond: "personalCare"},
+        { id: 11, cname: "Snacks", cimg: "snacks.png", ccond: "snacks"},
+        { id: 12, cname: "Sweets", cimg: "sweets.png", ccond: "sweets"},
+        { id: 13, cname: "Promo Deals", cimg: "deals.png", ccond: "deals"},
       ],
     }),
     methods: {

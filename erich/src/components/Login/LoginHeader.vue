@@ -17,18 +17,18 @@
               >
                 <v-img
                   contain
-                  src="../../assets/ERICH.svg"
+                  src="../../assets/ERICHNEW.svg"
                   max-height="120px"
                   max-width="120px"
-                  class="mr-1"
+                  class="mr-3"
                 ></v-img>
               </router-link>
               <v-divider
                 vertical
               ></v-divider>
-              <p
-                class="text-h5 ml-3 my-0 pt-1 grey--text text--darken-1"
-              >Login</p>
+              <h2
+                class=" ml-3 my-0 pt-1 grey--text text--darken-1"
+              >Login</h2>
             </div>
           </v-col>
         </v-row>
